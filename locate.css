@@ -1,0 +1,74 @@
+body {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  height: 100vh; 
+  margin: 0; 
+  padding: 20px 0; 
+  background-color: #8B4513; /* バックグラウンドカラーを茶色に設定 */
+  overflow: hidden; 
+  position: relative; 
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+h1 {
+
+
+  margin-bottom: 20px;
+  z-index: 1; 
+  position: relative;
+  font-size: 48px; /* フォントサイズを拡大 */ 
+  background: linear-gradient(256deg, rgb(161, 255, 255) 0.00%, rgb(0, 216, 216) 100.00%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; /* テキストにグラデーションを適用 */
+  animation: moveHorizontal 1s infinite alternate; /* アニメーションを追加 */
+
+
+}
+
+p {
+  width: 200px; 
+  height: 200px; 
+  background-color: #39C; 
+  border: 2px solid blue;
+  padding: 10px;
+  margin: 10px;
+  text-align: center; 
+  line-height: 180px;
+  border-radius: 20px; 
+  position: relative; 
+  animation: flow 5s infinite alternate;
+  overflow: hidden; 
+  white-space: nowrap; 
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes flow {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100px); }
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes moveHorizontal { 
+  0% { transform: translateX(0); } 
+  100% { transform: translateX(100px); } 
+
+}
